@@ -1,0 +1,9 @@
+# - This condition will skip the Commitizen CLI
+#     if the commit already has a Message
+#
+
+## "\$2" is the \`-m\` or \`-message\` flag.
+# If the message flag has been NOT set, use commitizen 
+if [ "\$2" != "message" ];then 
+    exec < /dev/tty && node_modules/.bin/cz --hook "\$1" "\$2" "\$3" || true
+fi

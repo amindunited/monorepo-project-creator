@@ -1,0 +1,17 @@
+import React, { ComponentProps } from 'react';
+import { Meta, Story } from '@storybook/react';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+export default {
+  title: 'Alpha/{{pascalCase name}}', // @todo - pick appropriate story location
+  component: {{pascalCase name}},
+  argTypes: {
+    title: { control: { type: 'text' } },
+  },
+} as Meta;
+
+export const {{camelCase name}}: Story<ComponentProps<typeof {{pascalCase name}}>> = args => <{{pascalCase name}} {...args} />;
+
+{{camelCase name}}.args = {
+  title: 'The component title (example)', // @todo - Remove this example if unused
+};

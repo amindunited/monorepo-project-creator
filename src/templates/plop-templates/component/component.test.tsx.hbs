@@ -1,0 +1,21 @@
+import React, { ComponentProps } from 'react';
+import { render, screen } from '@testing-library/react';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+type Props = ComponentProps<typeof {{pascalCase name}}>;
+
+describe('<{{pascalCase name}}/>', () => {
+  const setUp = (customProps?: Partial<Props>) => {
+    const defaultProps: Props = {
+      title: 'Example Prop', // @todo - this is from the example prop
+    };
+    const props = { ...defaultProps, ...customProps };
+
+    return render(<{{pascalCase name}} {...props} />);
+  };
+
+  it('renders {{pascalCase name}}', () => {
+    setUp();
+    expect(screen.getByText('{{pascalCase name}} Works')).toBeInTheDocument();
+  });
+});
