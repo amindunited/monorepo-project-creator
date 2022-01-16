@@ -12,6 +12,10 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'import/no-extraneous-dependencies': 'warn',
+    'import/prefer-default-export': 'off',
+  },
+  overrides: [],
 };
